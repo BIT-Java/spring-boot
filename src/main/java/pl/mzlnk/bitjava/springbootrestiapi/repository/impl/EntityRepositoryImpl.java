@@ -7,7 +7,7 @@ import pl.mzlnk.bitjava.springbootrestiapi.repository.EntityRepository;
 
 import java.util.*;
 
-//@Repository
+@Repository
 public class EntityRepositoryImpl implements EntityRepository {
 
     private Map<String, Entity> entities = new HashMap<>();

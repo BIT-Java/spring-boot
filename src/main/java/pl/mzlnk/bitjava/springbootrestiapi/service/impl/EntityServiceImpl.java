@@ -10,7 +10,7 @@ import pl.mzlnk.bitjava.springbootrestiapi.service.EntityService;
 import java.util.List;
 import java.util.Optional;
 
-//@Service
+@Service
 public class EntityServiceImpl implements EntityService {
 
     @Autowired
@@ -23,21 +23,21 @@ public class EntityServiceImpl implements EntityService {
 
     @Override
     public Optional<Entity> findById(String id) {
-        return null;
+        return entityRepository.findById(id);
     }
 
     @Override
     public Optional<Entity> findByNameAndSurname(String name, String surname) {
-        return Optional.empty();
+        return entityRepository.findByNameAndSurname(name, surname);
     }
 
     @Override
     public void remove(String uuid) {
-
+        entityRepository.remove(uuid);
     }
 
     @Override
     public void createOrUpdate(Entity entity) {
-
+        entityRepository.createOrUpdate(entity);
     }
 }
